@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org" layout:decorate="~{layout}"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<body>
+
+  <div layout:fragment="content">
+  
+	<section class="aw-layout-content  js-content">
+
+
+<div class="page-header">
+	<div class="container-fluid">
+		<h1>
+			Choose a service
+		</h1>
+	</div>
+</div>
+
+<!-- ######################### Bellow form Fields #################################### -->
+
+
+       <div class="container-fluid">
+
+       <form action="">
+
+                   
+				 <div class="col-sm-2">	
+				 <label>Select a style</label>
+				 <select class="form-control form-control-sm">
+				      
+				        <option>[[-----Choose-----]]</option>
+						<option>social</option>
+						<option>degrade</option>
+						<option>moikano</option>
+						<option>militar</option>
+					</select>
+					</div>
+
+                 <br/>
+                 <br/>
+                 <br/>
+                 <br/>
+
+               <div class="col-sm-1">	
+					<div class="form-check">
+               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                   <label class="form-check-label" for="flexCheckDefault">
+                    Hair-cut
+                   </label>
+               </div>
+               </div>
+               
+               
+               
+               
+               <div class="col-sm-10">
+               <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                    Shave
+                </label>
+             </div>
+             </div>
+             
+             
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+             
+             <div class="col-sm-3">
+	         <div class="form-group">
+		
+		     <label for="age">Date</label>
+		     <input id="age" name="age" placeholder="Date of birth" type="date" class="form-control"/>
+			 </div>
+             </div>
+             
+             
+             
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+             
+             <div class="col-sm-3">
+	         <div class="form-group">
+		
+		     <label for="age">Hours</label>
+		     <input id="age" name="age" placeholder="Date of birth" type="time" class="form-control"/>
+			 </div>
+             </div>
+             
+             
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+             
+              <div class="col-sm-12">
+             <div class="form-group">
+			 <button class="btn  btn-primary" type="submit">Schedule</button>
+			 <input type="reset" value="Cancel" class="btn  btn-default">
+			 </div>
+             </div>
+            
+             
+             
+		</form>
+		
+		</div>
+
+
+<!-- ############################### The end of the form ######################################## -->
+
+     
+
+	</section>
+	
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<title>User Profile</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/css_template/vendors.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/css_template/barbershop.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/css_template/application.css"/> 
+
+	
+</head>
+<body>
+
+<div class="aw-layout-loading  js-loading-overlay">
+	<div class="aw-layout-loading__container">
+		<span class="aw-balls-spinner">Loading...</span>
+	</div>
+</div>
+
+<div class="aw-layout-page">
+
+	<nav class="navbar  navbar-fixed-top  navbar-default  js-sticky-reference" id="main-navbar">
+	  <div class="container-fluid">
+
+	    <div class="navbar-header">
+	      
+	        <a href="/"><img src="/images/login_images/homelogin.png" style="width: 35px; margin-top: 4px;"></a>
+
+	      <ul class="nav  navbar-nav">
+	        <li>
+	          <a href="#" class="js-sidebar-toggle"> <img alt="" src="/images/index_images/icon_menu.png"></a>
+	        </li>
+	      </ul>
+	    </div>
+
+	    
+	  </div>
+	</nav>
+
+	<aside class="aw-layout-sidebar  js-sidebar">
+		<div class="aw-layout-sidebar__content">
+		
+
+    <nav class="aw-menu  js-menu">
+      <ul class="aw-menu__list">
+       
+       <br/>
+        
+        <li class="aw-menu__item  is-active" sec:authorize="hasRole('ADMIN')">
+        
+          <a href="#">
+           <img alt="" src="/images/index_images/register_icon.png"><span>Register</span>
+          </a>
+          
+      
+          <ul class="aw-menu__list  aw-menu__list--sublist">
+            <li class="aw-menu__item  aw-menu__item--link"><a href="/registerUser/new">User register</a></li>
+             <li class="aw-menu__item  aw-menu__item--link"><a href="#">Search</a></li>
+            
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        <li class="aw-menu__item  is-active" sec:authorize="hasRole('ADMIN') or hasRole('CLIENTE')">
+        
+          <a href="#">
+           <img alt="" src="/images/index_images/schedule_icon.png"> <span> Schedule</span>
+          </a>
+          
+      
+          <ul class="aw-menu__list  aw-menu__list--sublist">
+             <li class="aw-menu__item  aw-menu__item--link"><a href="/schedule/new">View schedule</a></li>
+             <li class="aw-menu__item  aw-menu__item--link"><a href="#">Search</a></li>
+            
+            
+          </ul>
+        </li>
+        
+
+        
+        
+        <li class="aw-menu__item  is-active" sec:authorize="hasRole('ADMIN') or hasRole('CLIENTE')">
+        
+          <a href="#">
+           <img alt=""src="/images/index_images/profile_icon.png"> <span> Profile</span>
+          </a>
+          
+      
+          <ul class="aw-menu__list  aw-menu__list--sublist">
+             <li class="aw-menu__item  aw-menu__item--link"><a href="#">Edit profile</a></li>
+             <li class="aw-menu__item  aw-menu__item--link"><a href="#">Search</a></li>
+            
+            
+          </ul>
+        </li>
+       
+        
+        
+        
+        
+        <li class="aw-menu__item  is-active">
+        
+          <a href="/logout">
+          <img alt=""src="/images/index_images/turnoff.png"> <span> Get off</span>
+          </a>
+          
+        </li>
+        
+        
+        
+        
+
+      </ul>
+    </nav>
+
+		</div>
+		
+	</aside>
+
+    <div layout:fragment="content">
+	<section class="aw-layout-content  js-content">
+
+
+<div class="page-header">
+	<div class="container-fluid">
+		<h1>
+			System administrator area
+		</h1>
+	</div>
+</div>
+
+
+
+	</section>
+	</div>
+	
+	<footer class="aw-layout-footer  js-content">
+		<div class="container-fluid">
+			<span class="aw-footer-disclaimer">&copy; 2021 Barbershop. All rights reserved.</span>
+		</div>
+	</footer>
+
+</div>
+
+
+<script src="/javascripts/vendors.min.js"></script>
+<script src="/javascripts/barbershop.min.js"></script>
+
+</body>
+</html>
