@@ -29,13 +29,13 @@
                    
 				 <div class="col-sm-2">	
 				 <label>Select a haircut style</label>
-				 <select class="form-control form-control-sm">
+				 <select class="form-control form-control-sm" th:field="*{haircut_style}">
 				      
-				        <option>[[-----Choose-----]]</option>
-						<option>Blow out</option>
-						<option>Fade</option>
-						<option>Mowhawk</option>
-						<option>Undercut</option>
+				        <option value=" " disabled selected>[[-----Choose-----]]</option>
+					  	<option value="Blow out" th:text="Blowout"/>
+						<option value="Fade" th:text="Fade"/>
+						<option value="Mowhawk" th:text="Mowhawk"/>
+						<option value="Undercut" th:text="Undercut"/>
 					</select>
 					</div>
 
@@ -52,7 +52,7 @@
 
                <div class="col-sm-1">	
 					<div class="form-check">
-               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+               <input class="form-check-input" th:field="*{hair_cut}" type="checkbox" value="Hair-cut" id="flexCheckDefault"/>
                    <label class="form-check-label" for="flexCheckDefault">
                     Hair-cut
                    </label>
@@ -64,7 +64,7 @@
                
                <div class="col-sm-10">
                <div class="form-check">
-                  <input class="form-check-input" th:field="*{beard}"type="checkbox" value="" id="flexCheckChecked">
+                  <input class="form-check-input" th:field="*{beard}"type="checkbox" value="Beard" id="flexCheckChecked">
                     <label class="form-check-label" for="flexCheckChecked">
                     Beard
                 </label>

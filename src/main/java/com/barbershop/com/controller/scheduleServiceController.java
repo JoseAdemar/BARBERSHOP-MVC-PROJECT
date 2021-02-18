@@ -26,9 +26,11 @@ public class scheduleServiceController {
 	
 	
 	@PostMapping(path = "myAppointment/save")
-	public void toSaveAppointment(@ModelAttribute("appointment")Appointment appointment) {
+	public String toSaveAppointment(@ModelAttribute("appointment")Appointment appointment) {
 		
 		appointmentService.saveAppointment(appointment);
+		
+		return "redirect:/schedule/new";
 		
 	}
 }
