@@ -53,8 +53,8 @@ public class UserModel implements UserDetails {
 	
 	
 	@OneToMany(fetch = FetchType.EAGER)
-	@JoinTable(name = "usuarios_role",
-	  joinColumns = @JoinColumn(name = "usuario_id",
+	@JoinTable(name = "users_role",
+	  joinColumns = @JoinColumn(name = "user_id",
 	    referencedColumnName = "id",
 	      table = "usertable"),
 	        inverseJoinColumns = @JoinColumn(name="role_id",

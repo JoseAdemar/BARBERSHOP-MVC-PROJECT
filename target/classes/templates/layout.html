@@ -70,7 +70,8 @@
         
         
         
-        <li class="aw-menu__item  is-active" sec:authorize="hasRole('ADMIN') or hasRole('CLIENTE')">
+        <li class="aw-menu__item  is-active" sec:authorize="hasRole('ADMIN')
+          or hasRole('CLIENT') or hasRole('EMPLOYEE')">
         
           <a href="#">
            <img alt="" src="/images/index_images/schedule_icon.png"> <span> Schedule</span>
@@ -88,7 +89,8 @@
 
         
         
-        <li class="aw-menu__item  is-active" sec:authorize="hasRole('ADMIN') or hasRole('CLIENTE')">
+        <li class="aw-menu__item  is-active" sec:authorize="hasRole('ADMIN')
+         or hasRole('CLIENT') or hasRole('EMPLOYEE')">
         
           <a href="#">
            <img alt=""src="/images/index_images/profile_icon.png"> <span> Profile</span>

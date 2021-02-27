@@ -118,9 +118,9 @@
                      <select class="form-control" id="roles" th:field="*{roles}">
                    
                         
-          <option th:each = "categoria: ${categorias}" th:value="${categoria.id}"
+          <option th:each = "category: ${categories}" th:value="${category.id}"
           
-          th:text="${categoria.nomeRole}">Roles</option> 
+          th:text="${category.nameRole}">Roles</option> 
                         
              
                  </select>

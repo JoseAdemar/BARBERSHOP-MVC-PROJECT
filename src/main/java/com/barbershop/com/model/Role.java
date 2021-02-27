@@ -19,20 +19,20 @@ public class Role implements GrantedAuthority {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private String nomeRole;
+	private String nameRole;
 	
 	public Role(){
 		
 	}
 	
-	public Role(String nomeRole) {
+	public Role(String nameRole) {
 		
-		this.nomeRole = nomeRole;
+		this.nameRole = nameRole;
 	}
 
 	@Override
 	public String getAuthority() {
 		
-		return this.nomeRole;
+		return this.nameRole;
 	} 
 }

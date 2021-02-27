@@ -18,7 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.barbershop.com.model.Role;
 import com.barbershop.com.model.UserModel;
-import com.barbershop.com.repository.CategoriaRole;
+import com.barbershop.com.repository.CategoryRole;
 import com.barbershop.com.service.UserService;
 
 @Controller
@@ -29,7 +29,7 @@ public class UserController {
 	private UserService userService;
 
 	@Autowired
-	private CategoriaRole categoriaRole;
+	private CategoryRole categoriaRole;
 
 	@Autowired
 	private PasswordEncoder passwordEncoder;
@@ -39,7 +39,7 @@ public class UserController {
 
 		model.addAttribute("user", new UserModel());
 
-		model.addAttribute("categorias", categoriaRole.findAll());
+		model.addAttribute("categories", categoriaRole.findAll());
 
 		return "/register-user";
 	}
@@ -59,7 +59,7 @@ public class UserController {
 		
 		if(user == null ) {
 			
-	       Role roleCliente = categoriaRole.findOneByNomeRole("ROLE_CLIENTE");
+	       Role roleCliente = categoriaRole.findOneByNameRole("ROLE_CLIENT");
 	       
 	       
 			
